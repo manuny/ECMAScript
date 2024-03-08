@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		/* 
+		1. Создайте функцию mergeArrays, которая принимает два
+		массива и возвращает новый массив, содержащий все
+		элементы из обоих массивов. Используйте spread
+		оператор для объединения массивов.
+		mergeArrays([1, 2, 3], [4, 5, 6]); // Ожидаемый результат: [1,
+		2, 3, 4, 5, 6]*/
+
+		const arr1 = [1, 2, 3]
+		const arr2 = [4, 5, 6]
+		function mergArrays(arr1, arr2) {
+			return [...arr1, ...arr2];
+		}
+		console.log(mergArrays(arr1, arr2));
+		/*2. Создайте функцию removeDuplicates, которая принимает
+		любое количество аргументов и возвращает новый
+		массив, содержащий только уникальные значения.
+		Используйте rest оператор для сбора всех аргументов в
+		массив а затем filter для определения дубликатов.
+		removeDuplicates(1, 2, 3, 2, 4, 1, 5); // Ожидаемый
+		результат: [1, 2, 3, 4, 5]*/
+		const arr4 = [1, 2, 3, 2, 4, 1, 5];
+		const mergeArrays = [...arr4];
+
+		console.log(mergeArrays);
+
+		const arr5 = mergeArrays.filter((item, index) => {
+			return mergeArrays.indexOf(item) === index
+		});
+		console.log(arr5);
+
+
+	</script>
+</body>
+
+</html>

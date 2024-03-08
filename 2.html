@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		// 1. Функция getEvenNumbers
+		function getEvenNumbers(arr) {
+			return arr.filter(num => num % 2 === 0);
+		}
+
+		// 2. Функция calculateAverage
+		function calculateAverage(arr) {
+			// reduce - применяем функцию к каждому элементу слева на право
+			// 0 - начальное значение аккумулятора
+			const sum = arr.reduce((acc, num) => acc + num, 0);
+			return sum / arr.length;
+		}
+
+		// 3. Функция capitalizeFirstLetter
+		function capitalizeFirstLetter(str) {
+			// split - разбиваем строку
+			// map - применяем к каждому элементу фукнцпию, которую передаем
+			// join объединяем в одну строку
+			return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+		}
+
+		const numbers = [1, 2, 3, 4, 5, 6];
+		console.log(getEvenNumbers(numbers)); // Выведет: [2, 4, 6]
+		console.log(calculateAverage(numbers)); // Выведет: 3.5
+		console.log(capitalizeFirstLetter('hello qwerty')); // Выведет: Hello Qwerty
+
+
+
+	</script>
+</body>
+
+</html>
