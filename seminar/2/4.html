@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		/* Создайте класс Person, который имеет свойства name и age, а также
+		метод introduce(), который выводит сообщение с представлением
+		имени и возраста персоны.
+		const person = new Person("John", 25);
+		person.introduce(); // Вывод: My name is John and I'm 25 years old.*/
+		class Persons {
+
+			constructor(name, age) {
+				this.name = name;
+				this.age = age;
+			}
+
+			introduce = () => {
+				console.log(`My name is ${this.name}. Mнe ${this.age}`);
+			}
+		}
+
+		const person = new Persons("John", 25);
+		console.log(person);
+		person.introduce();
+
+	</script>
+</body>
+
+</html>
